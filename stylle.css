@@ -1,0 +1,456 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --color-white: #fff;
+    --color-yellow: #EACD73;
+    --color-blue:#3753D0;
+    --color-purple: #56169F;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 15px 30px;
+    position: fixed;
+    background:#ffb731;
+    z-index: 2;
+}
+
+.header-title{
+    text-decoration: none;
+
+}
+
+.header-title h1{
+    color: #eae8ec;
+    font-size: 2rem;
+    transition: opacity .3s ease;
+
+}
+
+.header-title h1:hover{
+    opacity: .8;
+}
+
+.navbar{
+    max-width: 350px;
+    width: 100%;
+}
+.navbar ul{
+    
+
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+   
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+
+
+#person{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #171414;
+   
+}
+
+.person-content{
+    height: 100%;
+    width: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.person-content div h1{
+    padding: 0px 4px;
+    color: transparent;
+    
+    position: relative;
+    width: fit-content;
+
+    font-size: 4.5rem;
+    line-height: 6rem;
+
+    animation: written_text .5s ease forwards;
+
+}
+
+.person-content div h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+.person-content div h1:nth-child(2){
+    animation-delay: 2s;
+}
+.person-content div h1:nth-child(3){
+    animation-delay: 3s;
+}
+.person-content div h1:nth-child(4){
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 4s;
+    
+   
+}
+
+.person-content div h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 0px;
+    height: 100%;
+    background: #ecc755;
+    animation: written_text_box 1s ease;
+    animation-delay: .5s;
+}
+
+.person-content div h1:nth-child(1) span{
+animation-delay: 0.5s;
+}
+
+.person-content div h1:nth-child(2) span{
+    animation-delay: 1.5s;
+    }
+    
+
+    .person-content div h1:nth-child(3) span{
+        animation-delay: 2.7s;
+        }
+        
+
+        .person-content div h1:nth-child(4) span{
+            animation-delay: 3.7s;
+            }
+            
+         
+            .person-name{
+                margin-top: 11rem;
+            }
+
+            .stacks-content{
+                display: flex;
+                justify-content: center;
+
+                flex-direction: column;
+                margin-top: 6rem;
+            }
+
+            .stacks-content h3{
+                color:#fff;
+                font-size: 1.15rem;
+                margin-left: 20px;
+            }
+
+            .stacks {
+                display: flex;
+                align-items: center;
+
+                flex-direction: row;
+            }
+
+            .stacks ul li{
+                display: flex;
+                align-items: center;
+                
+                position: relative;
+                
+                margin: 10px;
+                padding: 10px;
+
+                list-style: none;
+            }
+
+            .stacks ul li img {
+                width: 30px;
+                height: auto;
+                transition: transform .3s ease;
+            }
+
+            .stacks img{
+                width:30px;
+                height: 30px;
+            }
+
+            .stacks ul li div img:hover{
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+
+            .stacks ul li div:hover::after{
+                content:attr(data);
+                position: absolute;
+                top: 50px;
+                left: 10px;
+
+                width: 20px;
+                height: 20px;
+                color: #fff;
+            }
+
+            .person-background{
+                height: 100vh;
+                width: 50%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                flex-direction: column;
+                background-image: url(/ibm/carson-masterson-0mXw-dvuLok-unsplash.jpg);
+                background-size:cover;
+                background-position: top center;
+
+                z-index: 1;
+
+            }
+
+            .person-background::after{
+                content: ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: .7;
+                z-index: -1;
+             
+                background:
+                linear-gradient(90deg, transparent 30%, #000000),
+                linear-gradient(180deg, transparent 30%, #000000),
+                linear-gradient(0deg, transparent 65%, #000000);
+
+               
+            }
+           
+            .wrapper-profile-photo{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                padding: 14px;
+                margin: 20px 15px;
+
+                border-radius: 50%;
+
+                background: 
+                radial-gradient(#171414 60% transparent),
+                radial-gradient(#000000 68%, transparent 0),
+                linear-gradient(to top right, #ffa500 0%, #56169F 100%);
+            }
+                
+            .wrapper-profile-photo img{
+                border-radius: 50%;
+    
+                
+            }
+
+            .profile-photo{
+                width: 100%;
+                height: 200px;
+    
+            }
+
+
+
+            .links a img{
+                width: 30px;
+                height: 30px;
+                margin: 10px;
+                filter: brightness(.8);
+                transition: all.3s ease;
+            }
+
+
+            .links a img:hover{
+                transform: scale(1.15);
+                filter: brightness(1);
+
+            }
+            
+
+#about{
+    height: 100vh;
+    width: 100%;
+    background: black;
+
+    display: flex;
+    color: #fff;
+}
+
+
+.background-about{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.img-wrapper{
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+}
+
+
+.img-wrapper::after{
+
+     content: ;
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background: 
+     linear-gradient(.25turn, transparent 30%, #171414),
+     linear-gradient(.5turn, transparent 30%, #171414),
+     linear-gradient(.1turn, transparent 65%, #171414);
+
+
+}
+.img-wrapper img{
+      
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+
+}
+
+
+.box-about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 50%;
+    padding: 3rem;
+}
+
+
+.section-subtitle h2 p {
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.section-subtitle h2 p:nth-child(2) span{
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: black;
+    background: #ffb731;
+}
+
+.box-about h3{
+    margin: 3rem;
+    font-size: 2rem;
+}
+
+.box-about h3 p{
+    display: inline-block;
+    width: fit-content;
+    padding: 2px 4px;
+    border-radius: 4px;
+
+    color: black;
+    background: #ac1e70;
+}
+
+.box-about h4 p {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 9px;
+    border-radius: 4px;
+
+    color: black;
+    background: #14bff3;
+}
+
+
+
+
+
+.box-about h4{
+margin: 1rem 3rem;
+font-size: 1.5rem;
+}
+
+
+#footer{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin-top: auto;
+    color: #fff;
+    background: #000000;
+}
+
+
+
+@keyframes written_text {
+    100%{
+        color: #fff;
+    }
+}
+
+@keyframes written_text_name{
+    100%{
+        color: #0043ce;
+    }
+}
+
+@keyframes written_text_box{
+    50%{
+       width: 100%;
+       left: 0;
+       
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
